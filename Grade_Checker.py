@@ -35,12 +35,13 @@ agree_button = driver.find_element(By.NAME, AGREE) # Finding the agree element i
 agree_button.send_keys(Keys.RETURN) # Pressing enter on the element
 time.sleep(5) # Waiting 5 seconds for the page to load. And no to be suspicious.
 
-try:
-    output = driver.find_element(By.XPATH, CELL_PATH) # Trying to find the input element in the table.
-    playsound(Credentials.PATH_TO_SOUND) # If the input element is there, there is a grade update and a sound will play.
-    playsound(Credentials.PATH_TO_SOUND)
-except:
-    driver.quit() # If there isn't an input element, there will be an error and the software will quit.
+# try:
+#     output = driver.find_element(By.XPATH, CELL_PATH) # Trying to find the input element in the table.
+#     playsound(Credentials.PATH_TO_SOUND) # If the input element is there, there is a grade update and a sound will play.
+#     playsound(Credentials.PATH_TO_SOUND)
+# except:
+#     driver.quit() # If there isn't an input element, there will be an error and the software will quit.
 
 
 
+modelim = driver.find_element(By.XPATH, "/html/body/form[1]/table/tbody/tr[2]/td[7]/span")
