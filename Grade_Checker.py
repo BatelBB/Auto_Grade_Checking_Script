@@ -39,7 +39,7 @@ try:
     output = driver.find_element(By.XPATH, CELL_PATH) # Trying to find the input element in the table.
     playsound(Credentials.PATH_TO_SOUND) # If the input element is there, there is a grade update and a sound will play.
     playsound(Credentials.PATH_TO_SOUND)
- except:
+except:
     driver.quit() # If there isn't an input element, there will be an error and the software will quit.
 
 
